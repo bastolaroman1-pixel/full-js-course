@@ -50,3 +50,11 @@ console.log(x,y,z)
 //6
 
 console.log("abcd">"ABCD")
+
+
+//7
+
+let xay = 100;
+if (xay< 100)
+    x = 20;
+console.log(xay)
