@@ -1,34 +1,71 @@
-function greet() {
-    console.log("Hello World")
-    console.log("Namaste Nepal")
+function greet(){
+    console.log("Namaste, User")
 }
 
-greet()
+
+greet()            // calling function
 
 
 
-// variable shadowing
+// calculative function 
 
-let counter = 100
-console.log(counter)
+let temperatures;
+let meanTemperature;
+let sum;
 
-{
-    let counter = 2000
-    console.log(counter)
+function getMeanTemperature(){
+sum=0;
+
+for(let i=0;i<temperatures.length;i++){
+    sum+=temperatures[i]
+
+}
+meanTemperature=sum/temperatures.length
 }
 
-counter = counter + 100
-console.log(counter)
+temperatures=[12,34,23,34,18,20,26]
+getMeanTemperature()
+
+console.log(`meanTemperature ${meanTemperature}`)
 
 
-//var shadow
+// function with parameters
 
-var count = 340
-
-function test() {
-    var count = 2500;
-    console.log(count)
+function add(a,b){
+   return console.log(a+b)
+    
 }
 
-console.log(count)
-test()
+add(5,5)
+
+add(9,10)
+
+
+//2
+
+function getElement(elements,index){
+    return elements[index]
+}
+
+let names=["ram","sita","gita","hari"]
+
+let name=getElement(names,3)
+
+console.log(name)
+
+
+// shadowing 
+
+let a = 100, b = 200, c = 300;
+function test(a) {
+     let b = 10;
+     console.log(a); // parameter a
+     console.log(b); // local variable b
+     console.log(c); // global variable c
+}
+test(1);   // -> 1
+      // -> 10
+      // -> 300
+console.log(a); // -> 100
+console.log(b); // -> 200
+console.log(c); // -> 300
